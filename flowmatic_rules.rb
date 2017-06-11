@@ -1,11 +1,25 @@
 
-flowmatic_on = false
-water_available = false
+flowmatic_on = true
+water_available = true
 
 
 if flowmatic_on && water_available
-	flow_rate = 50
+	flow_rate = 100
 	puts "The flowmatic is on and water is available, the water rate is 50."
+	
+	if flow_rate < 50
+		puts "The flow rate is lesser! it is  #{flow_rate}!."
+		puts "Setting it to the standard value. (...)"
+		flow_rate = 50
+		puts "It's been set. Ahh, now its correct."
+	end
+
+	if flow_rate > 50
+		puts "The flow rate is more! it is  #{flow_rate}!."
+		puts "Setting it to the standard value. (...)"
+		flow_rate = 50
+		puts "It's been set. Now there's no danger."
+	end
 end
 
 
